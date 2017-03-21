@@ -1,0 +1,24 @@
+<html>
+    <head><title>ForonJS Test</title>
+    <style>
+        .cool{
+            color: #f00;
+        }
+    </style>
+    </head>
+    <body>
+        <div>
+            <h1 f-init="wait(3000).set('Async Title')">Title of the Project</h1>
+            <p id="unique">Some text</p>
+            <a href="#" f-click="id('someid').toggleClass('cool').id('unique').toggleHide()">Toggle Actions</a>
+        </div>
+        <div id="someid">
+            Some random text
+        </div>
+        <input type="text" name="name" id="name" value="" f-bind="next().bind()">
+        <p>paragraph1</p>
+        <input type="text" name="name" id="name" value="" f-bind="next().bind()">
+        <p>paragraph2</p>
+        <script src="dist/foron.min.js" onload="Foron.init()"></script>
+    </body>
+</html>

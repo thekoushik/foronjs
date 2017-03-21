@@ -1,0 +1,13 @@
+{
+  "name": "foronjs",
+  "version": "0.0.1",
+  "description": "Simple inline dom manipulation library",
+  "author": "Koushik Seal",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2",
+    "pump": "^1.0.2"
+  }
+}
