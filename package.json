@@ -1,6 +1,6 @@
 {
   "name": "foronjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple inline dom manipulation library",
   "author": "Koushik Seal",
   "license": "MIT",

@@ -10,14 +10,14 @@
         <div>
             <h1 f-init="wait(3000).set('Async Title')">Title of the Project</h1>
             <p id="unique">Some text</p>
-            <a href="#" f-click="id('someid').toggleClass('cool').id('unique').toggleHide()">Toggle Actions</a>
+            <a href="#" f-click="id('name1').val().eq('xyza').then().toggleHide().addClass('cool').but().me().set('conditioned')">Toggle Actions</a>
         </div>
-        <div id="someid">
+        <div id="someid" data-abc="xyz">
             Some random text
         </div>
-        <input type="text" name="name" id="name" value="" f-bind="next().bind()">
+        <input type="text" name="name" id="name1" value="" f-bind="next().bind()">
         <p>paragraph1</p>
-        <input type="text" name="name" id="name" value="" f-bind="next().bind()">
+        <input type="text" name="name" id="name2" value="" f-bind="next().bind()">
         <p>paragraph2</p>
         <script src="dist/foron.min.js" onload="Foron.init()"></script>
     </body>
