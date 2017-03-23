@@ -5,16 +5,16 @@ Simple inline DOM manipulation library
 ## Usage
 
 Include the js file:
-```
+```html
 <script src="foron.js"></script>
 ```
 
 Initialize whenever you want:
-```
+```javascript
 Foron.init();
 ```
 then
-```
+```html
 <div>Some Text</div>
 <span f-click="prev().set('New Content')">Click Me</span>
 ```
@@ -27,8 +27,8 @@ f-rclick | right click
 f-init | on foron init
 f-bind | on change
 
-##### DOMNode Functions
-#
+#### DOMNode Functions
+
 Function | Description
 --- | ---
 id('element_id') | select element with id
@@ -51,8 +51,8 @@ attr('attribute name') | attribute**
 val() | value**
 but() | resets the current condition chain
 
-##### Value Functions ( ** Return value )
-#
+#### Value Functions ( ** Return value )
+
 Function | Description
 --- | ---
 eq(value) | equals
@@ -62,10 +62,11 @@ gte(value) | greater than or equals
 lte(value) | less than or equals
 op(method,param1,param2,..) | invokes method on current value with params
 then() | sets the current value as condition and sets the domnode chain
+num() | converts to number(0 if not a number)
 
-##### Example
-#
-```
+#### Example
+
+```javascript
 id('name1').val().eq('xyz').then().toggleHide()
 ```
 
@@ -76,4 +77,3 @@ id('name1').val().eq('xyz').then().toggleHide()
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
-
