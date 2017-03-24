@@ -1,0 +1,32 @@
+<html>
+    <head><title>ForonJS Test</title>
+    <style>
+        .red{
+            border-color:#f00;
+            color: #f00;
+        }
+        .blue{
+            border-color:#00f0;
+            color: #00f;
+        }
+        .green{
+            border-color:#0f0;
+            color: #0f0;
+        }
+    </style>
+    </head>
+    <body>
+        <form action="/">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" f-bind="val().prop('length').between(0,8).then().removeClass('red').addClass('green').otherwise().removeClass('green').addClass('red')">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" f-bind="val().op('indexOf','@').gte(0).then().removeClass('red').addClass('green').otherwise().removeClass('green').addClass('red')">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" f-bind="val().eq(id('repassword').val()).and(val().ne('')).then().id('submit').enable(true).otherwise().enable(false)">
+            <label for="repassword">ReType Password</label>
+            <input type="password" name="repassword" id="repassword" f-bind="val().eq(id('password').val()).and(val().ne('')).then().id('submit').enable(true).otherwise().enable(false)">
+            <input type="submit" value="save" id="submit" disabled>
+        </form>
+        <script src="../lib/foron.js" onload="Foron.init()"></script>
+    </body>
+</html>
