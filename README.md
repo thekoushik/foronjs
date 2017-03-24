@@ -41,14 +41,16 @@ append('current') | append text
 addClass('class') | adds a class
 removeClass('class') | removes a class
 toggleClass('class') | toggles the provided class
+enable(bool) | enables/disables the selected element
 toggleHide(with css) | toggles hide(with css otherwise with hidden)
-bind(optional selector) | set text of currently selected element with value
+bind(optional selector,property) | set property(text default) of currently selected element with value
 wait(millisecond) | delay the next operation in chain(bt execution will continue)
 reset() | reset selection [and queue]
 me() | reset selection
 log(attr, logger function) | logs attribute(default is value)
 attr('attribute name') | attribute**
 val() | value**
+otherwise() | the else part of the current condition
 but() | resets the current condition chain
 
 #### Value Functions ( ** Return value )
@@ -60,6 +62,10 @@ ne(value) | not equals
 gt(value) | greater than
 gte(value) | greater than or equals
 lte(value) | less than or equals
+between(min,max) | greater than min and less than max
+and(value) | and operation
+or(value) | or operation
+prop(property) | gets the property
 op(method,param1,param2,..) | invokes method on current value with params
 then() | sets the current value as condition and sets the domnode chain
 num() | converts to number(0 if not a number)
