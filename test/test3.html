@@ -1,0 +1,27 @@
+<html>
+    <head><title>ForonJS Test</title>
+    <style>
+        .red{
+            border-color:#f00;
+            color: #f00;
+        }
+        .blue{
+            border-color:#00f0;
+            color: #00f;
+        }
+        .green{
+            border-color:#0f0;
+            color: #0f0;
+        }
+    </style>
+    </head>
+    <body>
+        <div>
+            <span >span text 1</span>
+            <span >span text 2</span>
+            <p id="pp" f-watch="prev().setClass(me(true).attr('class'))">paragraph</p>
+            <!--<button type="button" f-click="id('pp').addClass('red')">Click</button>-->
+        </div>
+        <script src="../lib/foron.js" onload="Foron.init()"></script>
+    </body>
+</html>
