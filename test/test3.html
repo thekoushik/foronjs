@@ -17,9 +17,11 @@
     </head>
     <body>
         <div>
-            <span >span text 1</span>
-            <span >span text 2</span>
-            <p id="pp" f-watch="prev().setClass(me(true).attr('class'))">paragraph</p>
+            <span id="first">span text -1</span>
+            <span class="special">span text 0</span>
+            <label >span text 1</label>
+            <span class="special">span text 2</span>
+            <p id="pp" f-watch="id('first').and().select('.special').set(me(true).attr('class'))">paragraph</p>
             <!--<button type="button" f-click="id('pp').addClass('red')">Click</button>-->
         </div>
         <script src="../lib/foron.js" onload="Foron.init()"></script>
