@@ -21,7 +21,7 @@
             <span class="special">span text 0</span>
             <label >span text 1</label>
             <span class="special">span text 2</span>
-            <p id="pp" f-watch="id('first').and().select('.special').set(me(true).attr('class'))">paragraph</p>
+            <p id="pp" f-watch="id('first').and().select('.special').setClass(me(true).attr('class'))">paragraph</p>
             <!--<button type="button" f-click="id('pp').addClass('red')">Click</button>-->
         </div>
         <script src="../lib/foron.js" onload="Foron.init()"></script>
